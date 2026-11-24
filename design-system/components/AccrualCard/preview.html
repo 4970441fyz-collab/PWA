@@ -1,0 +1,15 @@
+<!-- @dsCard group="02 · Molecules" height=150 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>AccrualCard</title>
+<style>body{margin:0;background:var(--bg);font-family:var(--font-sans)} #root{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start;padding:16px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+  var K = window.KabinetDS, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(K.AccrualCard, { type: 'Coupon', amount: '200 000 ₽', date: '15.06.2026' }),
+    h(K.AccrualCard, { type: 'Payment', amount: '200 000 ₽', date: '15.06.2026' })));
+</script>
+</body>
+</html>

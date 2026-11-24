@@ -1,0 +1,19 @@
+<!-- @dsCard group="01 · Atoms" height=176 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>AnswerOption</title>
+<style>body{margin:0;background:var(--bg);font-family:var(--font-sans)} #root{display:flex;flex-direction:column;gap:12px;padding:16px}</style></head>
+<body>
+<div id="root" role="radiogroup" aria-label="Срок инвестиций"></div>
+<script>
+  var K = window.KabinetDS, h = React.createElement;
+  function Demo() {
+    var s = React.useState(0), sel = s[0], set = s[1];
+    return h(React.Fragment, null, ['До 3 лет', 'От 3 до 5 лет'].map(function (t, i) {
+      return h(K.AnswerOption, { key: i, selected: sel === i, onClick: function () { set(i); } }, t);
+    }));
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(h(Demo));
+</script>
+</body>
+</html>

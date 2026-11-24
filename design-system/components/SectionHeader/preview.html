@@ -1,0 +1,18 @@
+<!-- @dsCard group="02 · Molecules" height=330 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>SectionHeader</title>
+<style>body{margin:0;background:var(--bg);font-family:var(--font-sans)} #root{display:flex;flex-direction:column;gap:24px;padding:16px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+  var K = window.KabinetDS, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(K.SectionHeader, { size: 'Small_black_button', title: 'Наши продукты', showButton: true }),
+    h(K.SectionHeader, { size: 'Small', title: 'Актуально сейчас', showButton: true }),
+    h(K.SectionHeader, { size: 'Large', title: 'Программы ИСЖ', showButton: true }),
+    h(K.SectionHeader, { size: 'LargeWithSubtitle', subtitle: 'Стратегии', title: 'Выберите цель' }),
+    h(K.SectionHeader, { size: 'SmallWithSubtitle', title: 'Условия', subtitle: 'Действуют до конца года' })));
+</script>
+</body>
+</html>

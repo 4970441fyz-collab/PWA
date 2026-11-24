@@ -1,0 +1,16 @@
+<!-- @dsCard group="02 · Molecules" height=100 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>ConditionCard</title>
+<style>body{margin:0;background:var(--bg);font-family:var(--font-sans)} #root{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start;padding:16px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+  var K = window.KabinetDS, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(K.ConditionCard, { label: 'Срок', value: '3 года' }),
+    h(K.ConditionCard, { label: 'Минимальный взнос', value: '100 000 ₽' }),
+    h(K.ConditionCard, { state: 'Alternative', label: 'Валюта', value: 'Рубли' })));
+</script>
+</body>
+</html>

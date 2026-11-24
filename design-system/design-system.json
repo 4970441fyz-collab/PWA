@@ -1,0 +1,38 @@
+{
+  "v": 3,
+  "assetGroups": {},
+  "blobs": {},
+  "createdOnFiles": {
+    "at": "2026-10-22T11:50:00Z",
+    "v": 1
+  },
+  "docs": {
+    "readme": "project/README.md",
+    "sections": []
+  },
+  "groups": [],
+  "lastChange": {
+    "at": "2026-10-28T10:00:00Z",
+    "by": "avoktaiz",
+    "note": "Добавлен ConditionsList; 10 компонентов ждут лимита Figma (≈1 запрос в день)",
+    "via": "Figma · Untitled (jx1NMlaFKpjV2dM3SmNTCT)"
+  },
+  "layout": "files",
+  "libraries": [
+    {
+      "file": "components/lib/react.production.min.js",
+      "global": "React",
+      "name": "react",
+      "version": "18.3.1"
+    },
+    {
+      "file": "components/lib/react-dom.production.min.js",
+      "global": "ReactDOM",
+      "name": "react-dom",
+      "version": "18.3.1"
+    }
+  ],
+  "namespace": "KabinetDS",
+  "sections": {},
+  "title": "Кабинет ИСЖ"
+}

@@ -1,0 +1,15 @@
+<!-- @dsCard group="02 · Molecules" height=480 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>ProductCard</title>
+<style>body{margin:0;background:var(--bg);font-family:var(--font-sans)} #root{display:flex;gap:16px;align-items:flex-start;overflow-x:auto;padding:16px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+  var K = window.KabinetDS, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(K.ProductCard, { subtitle: 'Ежемесячный купон', title: 'Валютные облигации', description: 'Облигации · Денежный рынок', performanceValue: '21,8%', performanceLabel: 'Ожидаемая доходность' }),
+    h(K.ProductCard, { subtitle: 'Ежемесячный купон', chipColor: 'peach', title: 'Рублёвые облигации', description: 'Облигации · Денежный рынок', performanceValue: '18,2%', performanceLabel: 'Ожидаемая доходность' })));
+</script>
+</body>
+</html>

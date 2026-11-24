@@ -1,0 +1,15 @@
+<!-- @dsCard group="02 · Molecules" height=150 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>MiniProductCard</title>
+<style>body{margin:0;background:var(--bg);font-family:var(--font-sans)} #root{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start;padding:16px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+  var K = window.KabinetDS, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(K.MiniProductCard, { title: 'Глобальные технологии', description: 'Акции IT-компаний США и Китая' }),
+    h(K.MiniProductCard, { color: '2', title: 'Золото', description: 'Биржевые фонды на золото' })));
+</script>
+</body>
+</html>

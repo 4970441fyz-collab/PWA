@@ -1,0 +1,14 @@
+<!-- @dsCard group="02 · Molecules" height=84 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>NavigationControls</title>
+<style>body{margin:0;background:var(--bg);font-family:var(--font-sans)} #root{display:block;padding:16px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+  var K = window.KabinetDS, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(K.NavigationControls, { onBack: function () {}, onNext: function () {} })));
+</script>
+</body>
+</html>

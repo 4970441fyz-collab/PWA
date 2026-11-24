@@ -1,0 +1,74 @@
+/* Токены дизайн-системы «Кабинет ИСЖ» (из design-system/tokens.json). Сгенерировано автоматически. */
+@font-face{font-family:'Onest';src:url('fonts/Onest-var.woff') format('woff');font-weight:100 900;font-display:swap}
+:root{
+  --color-white: #ffffff;
+  --color-bg: #fdfbfa;
+  --color-bg-2: #f3f1f0;
+  --color-stroke: #c1c7cd80;
+  --color-grey-2: #c1c7cd;
+  --color-grey: #767676;
+  --color-text: #21272a;
+  --color-black: #141414;
+  --color-pink: #ea6793;
+  --color-pink-bg: #ea67931a;
+  --color-blue: #8fa7d7;
+  --color-green-chip: #5aff7326;
+  --color-blue-chip: #5a91ff26;
+  --color-peach-chip: #ff9f5a26;
+  --color-Color-Background-0: var(--color-white);
+  --color-answer-selected-from: #fdedf2;
+  --color-answer-selected-to: #ebf1ff;
+  --color-answer-selected-border: #e5487b;
+  --color-goal-fade-0: rgba(242,241,237,0);
+  --color-goal-fade: rgba(242,241,237,.6);
+  --color-hist-from: #eaeff8;
+  --color-hist-via: #f7e9ee;
+  --color-hist-to: #eee7f8;
+  --space-0: 0px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-28: 28px;
+  --space-32: 32px;
+  --space-36: 36px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-60: 60px;
+  --space-64: 64px;
+  --space-100: 100px;
+  --space-120: 120px;
+  --space-160: 160px;
+  --space-negative-28: -28px;
+  --0: 0px;
+  --radius-4: 4px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-20: 20px;
+  --radius-24: 24px;
+  --radius-28: 28px;
+  --radius-32: 32px;
+  --radius-36: 36px;
+  --radius-40: 40px;
+  --radius-68: 68px;
+  --radius-100: 100px;
+  --font-sans: Onest, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+/* Десктоп */
+.t-bolshoy-zagolovok{font-family:var(--font-sans);font-size:84px;line-height:1.2;font-weight:400;letter-spacing:-0.03em}
+.t-zagolovok{font-family:var(--font-sans);font-size:54px;line-height:1.08;font-weight:400;letter-spacing:-0.02em}
+.t-zagolovok-1{font-family:var(--font-sans);font-size:48px;line-height:1.2;font-weight:400;letter-spacing:-0.02em}
+.t-zagolovok-2{font-family:var(--font-sans);font-size:38px;line-height:1.1;font-weight:400;letter-spacing:-0.02em}
+.t-podzagolovok{font-family:var(--font-sans);font-size:24px;line-height:30px;font-weight:400;letter-spacing:-0.02em}
+.t-osnovnoy-tekst{font-family:var(--font-sans);font-size:16px;line-height:20px;font-weight:300;letter-spacing:-0.02em}
+.t-kaps{font-family:var(--font-sans);font-size:16px;line-height:20px;font-weight:300;letter-spacing:0.05em}
+.t-tekst{font-family:var(--font-sans);font-size:14px;line-height:16px;font-weight:400;letter-spacing:-0.02em}
+/* Мобильный */
+.t-mob-zagolovok-ekrana-L{font-family:var(--font-sans);font-size:32px;line-height:38px;font-weight:600;letter-spacing:0}
+.t-mob-zagolovok-ekrana-S{font-family:var(--font-sans);font-size:28px;line-height:34px;font-weight:600;letter-spacing:0}
+.t-mob-zagolovok-bloka{font-family:var(--font-sans);font-size:20px;line-height:24px;font-weight:600;letter-spacing:-0.02em}
+.t-mob-osnovnoy-tekst{font-family:var(--font-sans);font-size:16px;line-height:24px;font-weight:400;letter-spacing:0}
+.t-mob-leybl{font-family:var(--font-sans);font-size:14px;line-height:20px;font-weight:500;letter-spacing:-0.02em}
+.t-mob-podpis{font-family:var(--font-sans);font-size:12px;line-height:16px;font-weight:400;letter-spacing:-0.02em}

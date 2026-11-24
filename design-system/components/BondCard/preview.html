@@ -1,0 +1,15 @@
+<!-- @dsCard group="02 · Molecules" height=194 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>BondCard</title>
+<style>body{margin:0;background:var(--bg);font-family:var(--font-sans)} #root{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start;padding:16px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+  var K = window.KabinetDS, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(K.BondCard, { name: 'ОФЗ 26252', description: 'Государственные облигации', yieldValue: '14,4%' }),
+    h(K.BondCard, { name: 'ОФЗ 26248', description: 'Государственные облигации', yieldValue: '13,9%' })));
+</script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+/* Кабинет ИСЖ — стили компонентов. Значения берутся из tokens.css (переменные из Figma). */
+.ds-btn, .ds-action, .ds-nav, .ds-answer {
+  box-sizing: border-box; font-family: var(--font-sans); border: 0; margin: 0;
+  display: inline-flex; align-items: center; white-space: nowrap; cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+}
+.ds-icon { display: inline-flex; width: 20px; height: 20px; flex: none; align-items: center; justify-content: center; }
+.ds-icon > svg, .ds-icon > img { width: 20px; height: 20px; display: block; }
+
+/* Button — Figma 2:558 */
+.ds-btn {
+  padding: var(--space-16) var(--space-28); gap: var(--space-16); justify-content: center;
+  font-size: 14px; line-height: 16px; font-weight: 400; letter-spacing: -0.02em; text-align: center;
+  border-radius: var(--radius-36); background: var(--black); color: var(--white);
+}
+.ds-btn--accent { background: var(--pink); color: var(--white); }
+.ds-btn--with-icon, .ds-btn--outline { background: var(--bg-2); color: var(--grey); border-radius: var(--radius-40); }
+.ds-btn--with-icon { justify-content: flex-start; }
+
+/* ActionButton — Figma 2:573 */
+.ds-action {
+  padding: var(--space-16) var(--space-28); gap: var(--space-16); justify-content: flex-end;
+  font-size: 16px; line-height: var(--500); font-weight: 300; letter-spacing: -0.02em;
+  border-radius: var(--radius-40); background: var(--pink); color: var(--white);
+}
+.ds-action--black-arrow { background: var(--black); }
+.ds-action--back { background: var(--bg-2); color: var(--grey); justify-content: flex-start; }
+
+/* NavigationItem — Figma 2:586 */
+.ds-nav {
+  height: 48px; padding: 0 var(--space-20); justify-content: center; border-radius: var(--radius-100);
+  font-size: 16px; line-height: var(--500); font-weight: 300; letter-spacing: -0.02em;
+  background: var(--white); color: var(--text); text-decoration: none;
+}
+.ds-nav[aria-current="page"] { background: var(--bg-2); }
+
+/* AnswerOption — Figma 2:591 */
+.ds-answer {
+  width: 200px; height: 56px; padding: var(--space-28); justify-content: space-between; text-align: left;
+  border-radius: var(--radius-16); background: var(--bg-2); color: var(--black);
+  font-size: 16px; line-height: var(--500); font-weight: 300; letter-spacing: -0.02em;
+}
+.ds-answer[aria-checked="true"] {
+  height: 59px; border: 1.5px solid var(--answer-selected-border);
+  background: linear-gradient(to right, var(--answer-selected-from), var(--answer-selected-to));
+}
+.ds-answer__check {
+  width: 24px; height: 24px; flex: none; border-radius: var(--radius-12); background: var(--pink); color: var(--white);
+  display: inline-flex; align-items: center; justify-content: center;
+}
+
+.ds-btn:focus-visible, .ds-action:focus-visible, .ds-nav:focus-visible, .ds-answer:focus-visible {
+  outline: 2px solid var(--text); outline-offset: 2px;
+}
+
+/* ---------- 02 · Molecules ---------- */
+.ds-card { box-sizing: border-box; font-family: var(--font-sans); color: var(--text); -webkit-font-smoothing: antialiased; }
+.ds-card p { margin: 0; }
+.t-z2 { font-size: 38px; line-height: 1.1; font-weight: 400; letter-spacing: -0.02em; }
+.t-z1 { font-size: 48px; line-height: 1.2; font-weight: 400; letter-spacing: -0.02em; }
+.t-z { font-size: 54px; line-height: 1.08; font-weight: 400; letter-spacing: -0.02em; }
+.t-sub { font-size: 24px; line-height: 30px; font-weight: 400; letter-spacing: -0.02em; }
+.t-body { font-size: 16px; line-height: var(--500); font-weight: 300; letter-spacing: -0.02em; }
+.t-caps { font-size: 16px; line-height: 20px; font-weight: 300; letter-spacing: 0.05em; text-transform: uppercase; }
+.t-text { font-size: 14px; line-height: 16px; font-weight: 400; letter-spacing: -0.02em; }
+.c-grey { color: var(--grey); } .c-grey-2 { color: var(--grey-2); } .c-text { color: var(--text); }
+/* Место под иллюстрацию, пока картинка не передана (иллюстрации из Figma не импортированы). */
+.ds-art { background: linear-gradient(135deg, var(--answer-selected-from), var(--answer-selected-to)); }
+.ds-art img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: inherit; }
+
+/* ProductCard — Figma 2:627 */
+.ds-product { width: 396px; height: 448px; padding: var(--space-16); gap: var(--space-16); display: flex; flex-direction: column; background: var(--bg-2); border-radius: var(--radius-32); }
+.ds-product__content { position: relative; overflow: hidden; flex: 1 0 0; display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-20); padding: var(--space-28); background: var(--white); border-radius: var(--radius-24); }
+.ds-product__art { position: absolute; right: -74px; bottom: -50px; width: 365px; height: 268px; opacity: .8; pointer-events: none; }
+.ds-product__art.ds-art { opacity: .6; border-radius: 50%; }
+.ds-product__info, .ds-product__chip { position: relative; }
+.ds-product__info { display: flex; flex-direction: column; gap: var(--space-8); }
+.ds-chip { display: inline-flex; padding: var(--space-8) var(--space-16); border-radius: var(--radius-100); background: var(--blue-chip); color: var(--grey); }
+.ds-chip--peach { background: var(--peach-chip); } .ds-chip--green { background: var(--green-chip); }
+.ds-product__perf { padding: 0 var(--space-8); display: flex; flex-direction: column; }
+
+/* SectionHeader — Figma 2:694 */
+.ds-section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-16); width: 100%; }
+.ds-section-head--stack { flex-direction: column; justify-content: flex-start; gap: var(--space-12); }
+.ds-section-head__title { flex: 1 0 0; min-width: 0; }
+.ds-section-head .ds-btn { padding: var(--space-12) var(--space-28); }
+
+/* FinancialGoalCard — Figma 2:716 */
+.ds-goal { position: relative; overflow: hidden; width: 408px; height: 513px; padding: var(--space-32); display: flex; flex-direction: column; justify-content: space-between; background: var(--white); border-radius: var(--radius-32); }
+.ds-goal__art { position: absolute; inset: 0; }
+.ds-goal__art img { width: 100%; height: 100%; object-fit: cover; }
+.ds-goal::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, var(--goal-fade-0) 53.444%, var(--goal-fade)); pointer-events: none; }
+.ds-goal > p { position: relative; z-index: 1; }
+
+/* PromoCard — Figma 2:603 */
+.ds-promo { width: 295px; height: 354px; padding: var(--space-20); gap: var(--space-20); display: flex; flex-direction: column; background: var(--bg-2); border-radius: var(--radius-32); }
+.ds-promo__art { height: 189.34px; flex: none; border-radius: var(--radius-16); overflow: hidden; }
+.ds-promo__text { display: flex; flex-direction: column; gap: var(--space-8); }
+
+/* DocumentConsentCard — Figma 2:726 */
+.ds-consent { width: 387px; display: flex; align-items: flex-start; gap: var(--space-16); padding: var(--space-28); border-radius: var(--radius-24); background: var(--bg); text-align: left; border: 0; cursor: pointer; }
+.ds-consent[aria-checked="true"] { border: 1.5px solid var(--answer-selected-border); background: linear-gradient(to right, var(--answer-selected-from), var(--answer-selected-to)); }
+.ds-consent__icon { width: 62px; height: 62px; flex: none; padding: var(--space-12); display: inline-flex; align-items: center; justify-content: center; border-radius: var(--radius-32); background: var(--pink-bg); color: var(--pink); }
+.ds-consent__icon > * { width: 36px; height: 36px; }
+.ds-consent__text { flex: 1 0 0; min-width: 0; display: flex; flex-direction: column; gap: var(--space-8); }
+.ds-consent .ds-answer__check { background: var(--grey-2); }
+.ds-consent[aria-checked="true"] .ds-answer__check { background: var(--pink); }
+
+/* AccrualCard — Figma 2:747 */
+.ds-accrual { width: 320px; display: flex; align-items: flex-start; gap: var(--space-8); padding: var(--space-20); background: var(--bg); border-radius: var(--radius-16); }
+.ds-accrual__icon { flex: none; display: inline-flex; padding: var(--space-12); border-radius: var(--radius-32); background: var(--pink-bg); color: var(--pink); }
+.ds-accrual__icon > * { width: 20px; height: 20px; display: block; }
+.ds-accrual__mid { flex: 1 0 0; min-width: 0; display: flex; flex-direction: column; gap: var(--space-4); white-space: nowrap; }
+
+/* MiniProductCard — Figma 2:766 */
+.ds-mini { width: 393.333px; display: flex; flex-direction: column; gap: var(--space-16); padding: var(--space-28); border-radius: var(--radius-24); background: var(--bg); }
+.ds-mini--alt { background: var(--bg-2); }
+
+/* ConditionCard — Figma 2:773 */
+.ds-condition { width: 196px; display: flex; flex-direction: column; gap: var(--space-4); padding: var(--space-16); border-radius: var(--radius-16); background: var(--bg); }
+
+/* NavigationControls — Figma 2:600 */
+.ds-nav-controls { display: flex; justify-content: flex-end; align-items: flex-start; gap: var(--space-16); }
+
+/* BondCard — Figma 2:601 */
+.ds-bond { width: 279px; display: flex; flex-direction: column; gap: var(--space-16); padding: var(--space-20); background: var(--bg-2); border-radius: var(--radius-24); }
+.ds-bond__top, .ds-bond__yield { display: flex; flex-direction: column; gap: var(--space-4); white-space: nowrap; }
+.ds-bond__divider { height: 0; border-top: 1px solid var(--stroke); }
+
+/* FeeRow — Figma 2:602 */
+.ds-fee-row { width: 100%; display: flex; align-items: center; gap: var(--space-16); padding: var(--space-12) var(--space-4); }
+.ds-fee-row__value { width: 48px; flex: none; }
+.ds-fee-row__desc { flex: 1 0 0; min-width: 0; }
+.ds-fee-row__period { white-space: nowrap; }
+
+/* MetricCard — Figma 2:624 */
+.ds-metric { width: 370px; height: 420px; padding: var(--space-28); display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-2); border-radius: var(--radius-32); color: var(--text); }
+/* ProfileCard — Figma 2:625 */
+.ds-profile { position: relative; overflow: hidden; width: 484px; height: 572px; padding: var(--space-32); display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; background: var(--bg-2); border-radius: var(--radius-32); color: var(--text); }
+.ds-profile__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .48; pointer-events: none; border-radius: var(--radius-32); }
+.ds-profile__top { position: relative; width: 100%; display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-60); }
+.ds-profile__head { width: 100%; display: flex; flex-direction: column; gap: var(--space-16); }
+.ds-profile__avatar { width: 132.851px; height: 132.851px; flex: none; border-radius: var(--radius-68); overflow: hidden; }
+.ds-profile__status { position: relative; display: inline-flex; align-items: center; justify-content: center; padding: var(--space-12) var(--space-28); border-radius: var(--radius-36); background: var(--blue); color: var(--white); text-align: center; white-space: nowrap; }
+
+.ds-historical-return { box-sizing: border-box; width: 100%; max-width: 852px; display: flex; flex-direction: column; gap: var(--space-28); padding: var(--space-32); border-radius: var(--radius-32); overflow: hidden; position: relative; background: linear-gradient(to right, var(--hist-from), var(--hist-via) 59.615%, var(--hist-to)); }
+.ds-historical-return__body { display: flex; flex-direction: column; gap: var(--space-12); }
+.ds-historical-return__title { margin: 0; color: var(--text); }
+.ds-historical-return__body > p { margin: 0; }
+
+/* ConditionsList — Figma 2:780 */
+.ds-conditions-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-12); width: 100%; max-width: 404px; }
+.ds-conditions-list > .ds-condition { width: auto; white-space: nowrap; }

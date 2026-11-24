@@ -1,0 +1,55 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Кабинет ИСЖ</title>
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--bg); color:var(--text); font-family:var(--font-sans); overflow:hidden; }
+  .cover { position:relative; height:288px; width:960px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:288px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:288px; }
+  .pink { fill:var(--pink); }
+  .black { fill:var(--black); }
+  .blue { fill:var(--blue); }
+  .soft { fill:var(--bg-2); }
+  .cut { fill:var(--bg); }
+  .r40 { rx:var(--radius-40); }
+  .r36 { rx:var(--radius-36); }
+  .words { position:absolute; left:var(--space-32); bottom:var(--space-32); max-width:440px; }
+  .name { margin:0; font-size:100px; line-height:.95; font-weight:400; letter-spacing:-0.03em; color:var(--text); }
+  .tag { margin:var(--space-12) 0 0 4px; font-size:14px; line-height:20px; color:var(--grey); letter-spacing:-0.02em; }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      pink 176×272 slab bled off the top (the one accent, biggest) · black 256×168 bled off the right (main buttons) · blue 120×56 pill · bg-2 136×56 pill bled right — ≈35% of 960×288
+  arrangement one tall pink slab with satellites; top row of two pills, black slab under them, bottoms on one line space-32 above the edge
+  pattern     pills, from the system's pill buttons and radius-100 navigation: 24-tall pills (rx 12 = radius-12) cut in the ground colour, gaps space-12, rows at a space-36 pitch; three 24px discs (the answer-check circle) cut into the pink slab
+  scales      gutters space-16; slab corners radius-40 and radius-36; pill rx = half height; discs r 12 (radius-12)
+-->
+<rect class="pink r40" x="16" y="-40" width="176" height="272" rx="40"/>
+<rect class="blue" x="208" y="16" width="120" height="56" rx="28"/>
+<rect class="soft" x="344" y="16" width="160" height="56" rx="28"/>
+<rect class="black r36" x="208" y="88" width="304" height="168" rx="36"/>
+<circle class="cut" cx="52" cy="196" r="12"/>
+<circle class="cut" cx="88" cy="196" r="12"/>
+<circle class="cut" cx="124" cy="196" r="12"/>
+<rect class="cut" x="240" y="184" width="80" height="24" rx="12"/>
+<rect class="cut" x="332" y="184" width="56" height="24" rx="12"/>
+<rect class="cut" x="400" y="184" width="104" height="24" rx="12"/>
+<rect class="cut" x="240" y="148" width="56" height="24" rx="12"/>
+<rect class="cut" x="308" y="148" width="120" height="24" rx="12"/>
+</svg>
+</div>
+<div class="words">
+<h1 class="name">Кабинет<br>ИСЖ</h1>
+<p class="tag">Личный кабинет инвестиционного страхования жизни</p>
+</div>
+</div>
+</body>
+</html>
